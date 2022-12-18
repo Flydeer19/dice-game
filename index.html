@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container d-flex justify-content-center">
-      <section class="player-0" id="player-0">
+      <section class="player-0 active-player" id="player-0">
         <h2 id="name-player-0">Player 1</h2>
         <h3 class="total-score">
           Total score
@@ -41,6 +41,12 @@
           </h4>
         </div>
       </section>
+    </div>
+    <img src="/images/dice-3.png" alt="" id="dice-image" />
+    <div class="container d-flex justify-content-between">
+      <button class="btn btn-success" id="roll-dice">Roll dice</button>
+      <button class="btn btn-success" id="hold-score">Hold score</button>
+      <button class="btn btn-success" id="new game">New game</button>
     </div>
     <script src="/src/app.js"></script>
   </body>
