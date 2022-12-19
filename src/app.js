@@ -3,7 +3,12 @@
 const btnRollDice = document.querySelector("#roll-dice");
 const btnHoldScore = document.getElementById("hold-score");
 const btnNewGame = document.querySelector("#new-game");
+const btnInstruction = document.querySelector("#instruction");
+const btnCloseModal = document.querySelector("#close-modal");
+
 const diceImg = document.querySelector("#dice-image");
+const instructionModal = document.querySelector("#instruction-modal");
+const overlay = document.querySelector("#overlay");
 
 const player0 = document.querySelector("#player-0");
 const player1 = document.querySelector("#player-1");
@@ -93,6 +98,26 @@ function resetGame() {
   btnHoldScore.disabled = false;
 }
 
+function showInstruction() {
+  instructionModal.classList.remove("hidden");
+  overlay.classList.add("overlay");
+}
+
+function closeInstructionModal() {
+  instructionModal.classList.add("hidden");
+  overlay.classList.remove("overlay");
+}
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    if (!instructionModal.classList.contains("hidden")) {
+      closeInstructionModal();
+    }
+  }
+});
+
 btnRollDice.addEventListener("click", rollDice);
 btnHoldScore.addEventListener("click", holdScore);
 btnNewGame.addEventListener("click", resetGame);
+btnInstruction.addEventListener("click", showInstruction);
+btnCloseModal.addEventListener("click", closeInstructionModal);

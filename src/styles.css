@@ -9,6 +9,7 @@ body {
     rgb(238, 226, 159) 84.8%
   );
   background-attachment: fixed;
+  position: relative;
 }
 
 .player-0,
@@ -38,4 +39,45 @@ img {
 
 .winner {
   background-color: blueviolet;
+}
+.blur {
+  filter: blur(8px);
+}
+
+.instruction-modal {
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  top: 200px;
+  left: 550px;
+  z-index: 2;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 3;
+}
+
+h1 {
+  margin: 50px;
+}
+
+h1 .close-modal {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.overlay {
+  backdrop-filter: blur(3px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }

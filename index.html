@@ -11,6 +11,10 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <script
+      src="https://kit.fontawesome.com/861f510dfd.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
@@ -47,7 +51,27 @@
       <button class="btn btn-success" id="roll-dice">Roll dice</button>
       <button class="btn btn-success" id="hold-score">Hold score</button>
       <button class="btn btn-success" id="new-game">New game</button>
+      <button class="btn btn-primary" id="instruction">Instruction</button>
     </div>
+
+    <div class="instruction-modal hidden" id="instruction-modal">
+      <div class="modal-content">
+        <h1>
+          Hello
+          <button class="close-modal" id="close-modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </h1>
+        <ol>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+        </ol>
+      </div>
+    </div>
+    <div id="overlay"></div>
     <script src="/src/app.js"></script>
   </body>
 </html>
