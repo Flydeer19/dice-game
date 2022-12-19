@@ -35,3 +35,7 @@ img {
 .active-player {
   background-color: antiquewhite;
 }
+
+.winner {
+  background-color: blueviolet;
+}
