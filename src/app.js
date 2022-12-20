@@ -5,6 +5,12 @@ const btnHoldScore = document.getElementById("hold-score");
 const btnNewGame = document.querySelector("#new-game");
 const btnInstruction = document.querySelector("#instruction");
 const btnCloseModal = document.querySelector("#close-modal");
+const nameSubmit0 = document.querySelector("#name-submit-0");
+const nameInput0 = document.querySelector("#name-0");
+const nameSubmit1 = document.querySelector("#name-submit-1");
+const nameInput1 = document.querySelector("#name-1");
+let playerName0 = document.querySelector("#name-player-0");
+let playerName1 = document.querySelector("#name-player-1");
 
 const diceImg = document.querySelector("#dice-image");
 const instructionModal = document.querySelector("#instruction-modal");
@@ -25,6 +31,27 @@ const playersHTML = [player0, player1];
 let totalScores;
 let currentScores;
 let activePlayer;
+
+function displayName0(event) {
+  event.preventDefault();
+  const enteredName = nameInput0.value;
+  playerName0.textContent = enteredName;
+  nameSubmit0.classList.add("hidden");
+}
+
+nameSubmit0.addEventListener("submit", displayName0);
+
+nameSubmit1.classList.remove("hidden");
+
+function displayName1(event) {
+  event.preventDefault();
+  const enteredName = nameInput1.value;
+  playerName1.textContent = enteredName;
+  nameSubmit1.classList.add("hidden");
+  overlay.classList.remove("overlay");
+}
+
+nameSubmit1.addEventListener("submit", displayName1);
 
 function init() {
   totalScores = [0, 0];
@@ -64,7 +91,6 @@ function rollDice() {
     totalScores[activePlayer] = 0;
     totalScoresHTML[activePlayer].textContent = totalScores[activePlayer];
     switchActivePlayerClass();
-    diceImg.classList.add("hidden");
     btnHoldScore.disabled = true;
   } else {
     currentScores[activePlayer] += diceNumber;
@@ -79,7 +105,7 @@ function holdScore() {
   resetCurrentScore();
   btnHoldScore.disabled = true;
 
-  if (totalScores[activePlayer] >= 20) {
+  if (totalScores[activePlayer] >= 40) {
     playersHTML[activePlayer].classList.add("winner");
     btnRollDice.disabled = true;
   } else {

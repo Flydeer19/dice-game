@@ -81,3 +81,23 @@ h1 .close-modal {
   height: 100%;
   z-index: 1;
 }
+
+.enter-name-1 {
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  top: 200px;
+  left: 550px;
+  z-index: 2;
+}
+
+.enter-name-0 {
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  top: 200px;
+  left: 550px;
+  z-index: 3;
+}
