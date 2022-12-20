@@ -1,32 +1,110 @@
 body {
-  background: linear-gradient(
-    122.3deg,
-    rgb(111, 71, 133) 14.6%,
-    rgb(232, 129, 166) 29.6%,
-    rgb(237, 237, 183) 42.1%,
-    rgb(244, 166, 215) 56.7%,
-    rgb(154, 219, 232) 68.7%,
-    rgb(238, 226, 159) 84.8%
-  );
-  background-attachment: fixed;
+  background-image: url("/images/background.png");
+  background-size: cover;
+  font-family: "Source Code Pro", monospace;
+}
+
+.main {
   position: relative;
+}
+
+.upper-buttons {
+  margin-top: 1.25rem;
+}
+
+.new-game,
+.instruction {
+  padding: 0.625rem 3.125rem;
+  background-color: rgba(56, 81, 112, 0.7);
+  font-size: 1.25rem;
+  border-radius: 1.875rem;
+  color: black;
+  transition: all 150ms ease-in-out;
+}
+
+.new-game:hover,
+.instruction:hover {
+  background-color: rgba(56, 81, 112, 0.9);
 }
 
 .player-0,
 .player-1 {
-  background-color: rgb(248, 125, 146);
+  background-color: rgba(87, 208, 180, 0.8);
+  box-shadow: rgba(50, 50, 93, 0.25) 0rem 3.125rem 6.25rem -1.25rem,
+    rgba(0, 0, 0, 0.3) 0rem 1.875rem 3.75rem -1.875rem,
+    rgba(10, 37, 64, 0.35) 0rem -0.125rem 0.375rem 0rem inset;
+  border-radius: 1.875rem;
+  text-align: center;
+  padding: 1.25rem 3.125rem;
+  margin-top: 3.125rem;
+}
 
-  border-radius: 10px;
-  margin-top: 100px;
-  padding: 170px 140px;
-  border: 2px solid red;
+.player-0 {
+  margin-right: 1.875rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 3.125rem;
+  margin: 2.5rem 5rem;
+}
+
+section .total-score {
+  margin: 3.75rem 0;
+  font-size: 1.875rem;
+}
+
+section .total-score-number {
+  font-weight: 600;
+  padding-top: 1.25rem;
+  font-size: 3.125rem;
+}
+
+section .current-score-box {
+  margin: 1.875rem 5rem 3.125rem;
+  background-color: rgba(235, 225, 225, 0.4);
+  border-radius: 1.875rem;
+  padding: 1.25rem 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.188rem 0.5rem;
+}
+section .current-score-number {
+  padding-top: 0.625rem;
+  font-size: 2.5rem;
 }
 
 img {
   position: absolute;
-  top: 120px;
-  max-width: 120px;
-  left: 700px;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 7.5rem;
+  border-radius: 0.313rem;
+}
+
+.buttons {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.roll-dice,
+.hold-score {
+  padding: 0.625rem 3.125rem;
+  background-color: rgba(56, 81, 112, 0.7);
+  font-size: 1.25rem;
+  border-radius: 1.875rem;
+  color: black;
+  transition: all 150ms ease-in-out;
+}
+
+.roll-dice:hover,
+.hold-score:hover {
+  font-size: 1.375rem;
+  background-color: rgba(56, 81, 112, 0.9);
 }
 
 .hidden {
@@ -34,14 +112,11 @@ img {
 }
 
 .active-player {
-  background-color: antiquewhite;
+  background-color: rgba(159, 211, 199, 1);
 }
 
 .winner {
   background-color: blueviolet;
-}
-.blur {
-  filter: blur(8px);
 }
 
 .instruction-modal {
@@ -100,4 +175,46 @@ h1 .close-modal {
   top: 200px;
   left: 550px;
   z-index: 3;
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 10px;
+  }
+
+  img {
+    top: 25%;
+  }
+
+  .buttons {
+    top: 52%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+
+  img {
+    top: 18%;
+  }
+
+  .buttons {
+    top: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 6px;
+  }
+
+  img {
+    top: 14%;
+  }
+
+  .buttons {
+    top: 32%;
+  }
 }

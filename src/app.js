@@ -32,6 +32,8 @@ let totalScores;
 let currentScores;
 let activePlayer;
 
+// overlay.classList.add("overlay");
+
 function displayName0(event) {
   event.preventDefault();
   const enteredName = nameInput0.value;
@@ -41,17 +43,17 @@ function displayName0(event) {
 
 nameSubmit0.addEventListener("submit", displayName0);
 
-nameSubmit1.classList.remove("hidden");
+// nameSubmit1.classList.remove("hidden");
 
-function displayName1(event) {
-  event.preventDefault();
-  const enteredName = nameInput1.value;
-  playerName1.textContent = enteredName;
-  nameSubmit1.classList.add("hidden");
-  overlay.classList.remove("overlay");
-}
+// function displayName1(event) {
+//   event.preventDefault();
+//   const enteredName = nameInput1.value;
+//   playerName1.textContent = enteredName;
+//   nameSubmit1.classList.add("hidden");
+//   overlay.classList.remove("overlay");
+// }
 
-nameSubmit1.addEventListener("submit", displayName1);
+// nameSubmit1.addEventListener("submit", displayName1);
 
 function init() {
   totalScores = [0, 0];
@@ -60,7 +62,7 @@ function init() {
   totalScore1.textContent = 0;
   currentScore0.textContent = 0;
   currentScore1.textContent = 0;
-  diceImg.classList.add("hidden");
+  // diceImg.classList.add("hidden");
 }
 
 function setActivePlayer() {
@@ -105,7 +107,7 @@ function holdScore() {
   resetCurrentScore();
   btnHoldScore.disabled = true;
 
-  if (totalScores[activePlayer] >= 40) {
+  if (totalScores[activePlayer] >= 20) {
     playersHTML[activePlayer].classList.add("winner");
     btnRollDice.disabled = true;
   } else {
