@@ -32,7 +32,7 @@ let totalScores;
 let currentScores;
 let activePlayer;
 
-// overlay.classList.add("overlay");
+overlay.classList.add("overlay");
 
 function displayName0(event) {
   event.preventDefault();

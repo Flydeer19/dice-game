@@ -70,20 +70,28 @@
         </div>
       </div>
     </div>
-    <div class="instruction-modal hidden" id="instruction-modal">
+    <div class="instruction-modal" id="instruction-modal">
       <div class="modal-content">
-        <h1>
-          Hello
-          <button class="close-modal" id="close-modal">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </h1>
+        <button class="close-modal" id="close-modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
         <ol>
-          <li>Lorem ipsum dolor sit amet, consectetur</li>
-          <li>Lorem ipsum dolor sit amet, consectetur</li>
-          <li>Lorem ipsum dolor sit amet, consectetur</li>
-          <li>Lorem ipsum dolor sit amet, consectetur</li>
-          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>
+            A player throws the die and scores as many points as the total
+            shown.
+          </li>
+          <li>
+            The player may continue rolling and accumulating points or hold
+            their score.
+          </li>
+          <li>
+            If the player rolls a 1 their turn is over, they lose all the
+            accumulated points.
+          </li>
+          <li>
+            The first player to accumulate <strong>100</strong> or more points
+            wins the game.
+          </li>
         </ol>
       </div>
     </div>
@@ -102,7 +110,6 @@
       <button type="submit">Submit</button>
     </form>
     <div id="overlay"></div>
-    <div id="overlay-background"></div>
     <script src="/src/app.js"></script>
   </body>
 </html>

@@ -107,8 +107,8 @@ img {
   transition: all 150ms ease-in-out;
 }
 
-.roll-dice:hover,
-.hold-score:hover {
+.hold-score:hover,
+.roll-dice:hover {
   font-size: 1.375rem;
   background-color: rgba(56, 81, 112, 0.9);
 }
@@ -129,29 +129,37 @@ img {
 .instruction-modal {
   position: absolute;
   background: white;
-  border-radius: 5px;
-  padding: 10px;
-  top: 200px;
-  left: 550px;
+  border-radius: 0.938rem;
+  padding: 0.625rem 1.25rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.56) 0rem 1.375rem 4.375rem 0.25rem;
 }
 
 .modal-content {
   position: relative;
-  z-index: 3;
 }
 
-h1 {
-  margin: 50px;
+ol {
+  padding-top: 3.75rem;
 }
 
-h1 .close-modal {
+li {
+  padding-bottom: 0.625rem;
+}
+
+.close-modal {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  border: 2px solid blueviolet;
-  border-radius: 5px;
-  padding: 2px 5px;
+  top: 0.313rem;
+  right: 0.313rem;
+  border-radius: 0.313rem;
+  padding: 0.063rem 0.625rem;
+  font-size: 1.75rem;
+  color: rgb(105, 171, 156, 0.8);
+  border: 0.125rem solid rgb(105, 171, 156);
 }
 
 .overlay {
@@ -202,6 +210,10 @@ h1 .close-modal {
   .buttons {
     top: 70%;
   }
+
+  .instruction-modal {
+    top: 20%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -215,6 +227,10 @@ h1 .close-modal {
 
   .buttons {
     top: 57%;
+  }
+
+  .instruction-modal {
+    top: 40%;
   }
 }
 
@@ -292,10 +308,20 @@ h1 .close-modal {
     position: absolute;
     top: 50%;
   }
+
+  .instruction-modal {
+    top: 30%;
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 390px) {
   html {
     font-size: 6px;
+  }
+
+  .instruction-modal {
+    top: 30%;
+    font-size: 1.5rem;
   }
 }
