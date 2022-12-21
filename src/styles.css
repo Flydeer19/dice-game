@@ -70,7 +70,7 @@ section .current-score-box {
   margin: 1.875rem 5rem 3.125rem;
   background-color: rgba(235, 225, 225, 0.4);
   border-radius: 1.875rem;
-  padding: 1.25rem 0;
+  padding: 1.25rem 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.188rem 0.5rem;
 }
 section .current-score-number {
@@ -172,24 +172,73 @@ li {
   z-index: 1;
 }
 
-.enter-name-1 {
+form {
+  background-color: rgba(71, 144, 71, 0.9);
   position: absolute;
-  background: white;
-  border-radius: 5px;
-  padding: 10px;
-  top: 200px;
-  left: 550px;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.625rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.313rem 0.938rem;
+}
+
+form label {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.input-length {
+  font-size: 0.938rem;
+  font-weight: 400;
+}
+
+.form-content {
+  position: relative;
+  padding: 2.5rem 3.125rem 1.25rem;
 }
 
 .enter-name-0 {
-  position: absolute;
-  background: white;
-  border-radius: 5px;
-  padding: 10px;
-  top: 200px;
-  left: 550px;
   z-index: 3;
+}
+
+.enter-name-1 {
+  z-index: 2;
+}
+
+input {
+  display: block;
+  margin: 0.625rem auto;
+  border-radius: 0.313rem;
+  width: 12.5rem;
+  font-size: 1.25rem;
+}
+.name-buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+form button {
+  border-radius: 0.313rem;
+  width: 6.25rem;
+  height: 2.5rem;
+  background-color: rgba(56, 81, 112, 0.6);
+  border: none;
+  transition: all 150ms ease-in-out;
+  box-shadow: rgb(38, 57, 77) 0rem 1.25rem 1.875rem -0.625rem;
+}
+
+form .submit {
+  background-color: rgba(233, 247, 29, 0.6);
+}
+
+form .skip:hover {
+  background-color: rgba(56, 81, 112, 0.9);
+}
+
+form .submit:hover {
+  background-color: rgba(233, 247, 29, 0.9);
 }
 
 @media (max-width: 992px) {
@@ -213,6 +262,35 @@ li {
 
   .instruction-modal {
     top: 20%;
+  }
+
+  form {
+    top: 30%;
+    left: 50%;
+  }
+
+  form label {
+    font-size: 2.25rem;
+  }
+
+  .input-length {
+    font-size: 1.5rem;
+  }
+
+  .form-content {
+    padding: 3.5rem 3.5rem 2.25rem;
+  }
+
+  input {
+    margin: 1rem auto;
+    width: 20.5rem;
+    font-size: 2rem;
+  }
+
+  form button {
+    width: 9.25rem;
+    height: 4.5rem;
+    font-size: 1.5rem;
   }
 }
 

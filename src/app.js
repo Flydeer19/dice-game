@@ -9,8 +9,10 @@ const nameSubmit0 = document.querySelector("#name-submit-0");
 const nameInput0 = document.querySelector("#name-0");
 const nameSubmit1 = document.querySelector("#name-submit-1");
 const nameInput1 = document.querySelector("#name-1");
-let playerName0 = document.querySelector("#name-player-0");
-let playerName1 = document.querySelector("#name-player-1");
+const playerName0 = document.querySelector("#name-player-0");
+const playerName1 = document.querySelector("#name-player-1");
+const btnSkip0 = document.querySelector("#skip-0");
+const btnSkip1 = document.querySelector("#skip-1");
 
 const diceImg = document.querySelector("#dice-image");
 const instructionModal = document.querySelector("#instruction-modal");
@@ -32,7 +34,9 @@ let totalScores;
 let currentScores;
 let activePlayer;
 
-// overlay.classList.add("overlay");
+overlay.classList.add("overlay");
+
+//name input for Player1
 
 function displayName0(event) {
   event.preventDefault();
@@ -43,17 +47,32 @@ function displayName0(event) {
 
 nameSubmit0.addEventListener("submit", displayName0);
 
-// nameSubmit1.classList.remove("hidden");
+function closeInputModal0() {
+  nameSubmit0.classList.add("hidden");
+}
 
-// function displayName1(event) {
-//   event.preventDefault();
-//   const enteredName = nameInput1.value;
-//   playerName1.textContent = enteredName;
-//   nameSubmit1.classList.add("hidden");
-//   overlay.classList.remove("overlay");
-// }
+btnSkip0.addEventListener("click", closeInputModal0);
 
-// nameSubmit1.addEventListener("submit", displayName1);
+//name input for Player2
+
+nameSubmit1.classList.remove("hidden");
+
+function displayName1(event) {
+  event.preventDefault();
+  const enteredName = nameInput1.value;
+  playerName1.textContent = enteredName;
+  nameSubmit1.classList.add("hidden");
+  overlay.classList.remove("overlay");
+}
+
+nameSubmit1.addEventListener("submit", displayName1);
+
+function closeInputModal1() {
+  nameSubmit1.classList.add("hidden");
+  overlay.classList.remove("overlay");
+}
+
+btnSkip1.addEventListener("click", closeInputModal1);
 
 function init() {
   totalScores = [0, 0];
@@ -62,8 +81,10 @@ function init() {
   totalScore1.textContent = 0;
   currentScore0.textContent = 0;
   currentScore1.textContent = 0;
-  // diceImg.classList.add("hidden");
+  diceImg.classList.add("hidden");
 }
+
+init();
 
 function setActivePlayer() {
   activePlayer = player0.classList.contains("active-player") ? 0 : 1;
@@ -78,8 +99,6 @@ function switchActivePlayerClass() {
   player0.classList.toggle("active-player");
   player1.classList.toggle("active-player");
 }
-
-init();
 
 function rollDice() {
   const diceNumber = Math.trunc(Math.random() * 6) + 1;
@@ -107,7 +126,7 @@ function holdScore() {
   resetCurrentScore();
   btnHoldScore.disabled = true;
 
-  if (totalScores[activePlayer] >= 20) {
+  if (totalScores[activePlayer] >= 50) {
     playersHTML[activePlayer].classList.add("winner");
     btnRollDice.disabled = true;
   } else {

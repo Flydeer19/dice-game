@@ -89,25 +89,54 @@
             accumulated points.
           </li>
           <li>
-            The first player to accumulate <strong>100</strong> or more points
+            The first player to accumulate <strong>50</strong> or more points
             wins the game.
           </li>
         </ol>
       </div>
     </div>
-    <form class="enter-name-0 hidden" id="name-submit-0">
-      <label
-        >Enter the name for Player 1<input type="text" id="name-0" autofocus
-      /></label>
-      <br /><br />
-      <button type="submit">Submit</button>
+    <form class="enter-name-0" id="name-submit-0">
+      <div class="form-content">
+        <label>
+          Enter a name for Player 1
+          <br />
+          <span class="input-length">(maximum 10 characters)</span>
+          <input
+            type="text"
+            id="name-0"
+            minlength="1"
+            maxlength="10"
+            autofocus
+            placeholder="Ex:LazyBee..."
+          />
+        </label>
+        <br /><br />
+        <div class="name-buttons">
+          <button type="button" class="skip" id="skip-0">Skip</button>
+          <button type="submit" class="submit">Submit</button>
+        </div>
+      </div>
     </form>
     <form class="enter-name-1 hidden" id="name-submit-1">
-      <label
-        >Enter the name for Player 2<input type="text" id="name-1" autofocus
-      /></label>
-      <br /><br />
-      <button type="submit">Submit</button>
+      <div class="form-content">
+        <label>
+          Enter a name for Player 2
+          <br />
+          <span class="input-length">(maximum 10 characters)</span>
+          <input
+            type="text"
+            id="name-1"
+            maxlength="10"
+            autofocus
+            placeholder="Ex:CrazyFly..."
+          />
+        </label>
+        <br /><br />
+        <div class="name-buttons">
+          <button type="button" class="skip" id="skip-1">Skip</button>
+          <button type="submit" class="submit">Submit</button>
+        </div>
+      </div>
     </form>
     <div id="overlay"></div>
     <script src="/src/app.js"></script>
