@@ -30,41 +30,46 @@
         <button class="btn new-game" id="new-game">New game</button>
         <button class="btn instruction" id="instruction">Instruction</button>
       </div>
-      <div class="container d-flex justify-content-center">
-        <!-- add class active-player later -->
+      <div
+        class="container d-block d-sm-flex justify-content-center player-section"
+      >
         <section class="player-0 active-player" id="player-0">
           <h2 id="name-player-0">Player 1</h2>
-          <h3 class="total-score">
-            Total score
-            <div class="total-score-number" id="total-score-0">0</div>
-          </h3>
-          <div class="current-score-box">
-            <h4 class="current-score">
-              Current score
-              <div class="current-score-number" id="current-score-0">0</div>
-            </h4>
+          <div class="container d-flex d-sm-block justify-content-around">
+            <h3 class="total-score">
+              Total score
+              <div class="total-score-number" id="total-score-0">0</div>
+            </h3>
+            <div class="current-score-box">
+              <h4 class="current-score">
+                Current score
+                <div class="current-score-number" id="current-score-0">0</div>
+              </h4>
+            </div>
           </div>
         </section>
         <section class="player-1" id="player-1">
           <h2 id="name-player-1">Player 2</h2>
-          <h3 class="total-score">
-            Total score
-            <div class="total-score-number" id="total-score-1">0</div>
-          </h3>
-          <div class="current-score-box">
-            <h4 class="current-score">
-              Current score
-              <div class="current-score-number" id="current-score-1">0</div>
-            </h4>
+          <div class="container d-flex d-sm-block justify-content-around">
+            <h3 class="total-score">
+              Total score
+              <div class="total-score-number" id="total-score-1">0</div>
+            </h3>
+            <div class="current-score-box">
+              <h4 class="current-score">
+                Current score
+                <div class="current-score-number" id="current-score-1">0</div>
+              </h4>
+            </div>
           </div>
         </section>
+        <img src="/images/dice-3.png" alt="" id="dice-image" />
+        <div class="buttons">
+          <button class="btn roll-dice" id="roll-dice">Roll dice</button>
+          <button class="btn hold-score" id="hold-score">Hold score</button>
+        </div>
       </div>
     </div>
-    <div class="buttons">
-      <button class="btn roll-dice" id="roll-dice">Roll dice</button>
-      <button class="btn hold-score" id="hold-score">Hold score</button>
-    </div>
-    <img src="/images/dice-3.png" alt="" id="dice-image" />
     <div class="instruction-modal hidden" id="instruction-modal">
       <div class="modal-content">
         <h1>
