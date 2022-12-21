@@ -43,19 +43,19 @@ function displayName0(event) {
   const enteredName = nameInput0.value;
   playerName0.textContent = enteredName;
   nameSubmit0.classList.add("hidden");
+  nameSubmit1.classList.remove("hidden");
 }
 
 nameSubmit0.addEventListener("submit", displayName0);
 
 function closeInputModal0() {
   nameSubmit0.classList.add("hidden");
+  nameSubmit1.classList.remove("hidden");
 }
 
 btnSkip0.addEventListener("click", closeInputModal0);
 
 //name input for Player2
-
-nameSubmit1.classList.remove("hidden");
 
 function displayName1(event) {
   event.preventDefault();
