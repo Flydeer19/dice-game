@@ -38,7 +38,7 @@ body {
   border-radius: 1.875rem;
   text-align: center;
   padding: 1.25rem 3.125rem;
-  margin-top: 3.125rem;
+  margin-top: 2.125rem;
 }
 
 .player-0 {
@@ -241,6 +241,21 @@ form .submit:hover {
   background-color: rgba(233, 247, 29, 0.9);
 }
 
+footer .author {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgba(56, 81, 112, 1);
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: rgba(56, 81, 112, 1);
+}
+
 @media (max-width: 992px) {
   html,
   body {
@@ -258,6 +273,10 @@ form .submit:hover {
 
   .buttons {
     top: 70%;
+  }
+
+  h2 {
+    margin: 2.5rem 0;
   }
 
   .instruction-modal {
@@ -304,7 +323,11 @@ form .submit:hover {
   }
 
   .buttons {
-    top: 57%;
+    top: 58%;
+  }
+
+  .player-section {
+    max-width: 80rem;
   }
 
   .instruction-modal {
@@ -349,7 +372,7 @@ form .submit:hover {
   .player-0,
   .player-1 {
     padding: 0.25rem 0.125rem;
-    margin-top: 3.125rem;
+    margin-top: 9.125rem;
     margin-right: 0;
   }
 
