@@ -129,6 +129,8 @@ function holdScore() {
   if (totalScores[activePlayer] >= 50) {
     playersHTML[activePlayer].classList.add("winner");
     btnRollDice.disabled = true;
+    currentScoresHTML[activePlayer].innerHTML =
+      'You won <i class="fa-solid fa-trophy"></i>';
   } else {
     switchActivePlayerClass();
     diceImg.classList.add("hidden");
